@@ -1,0 +1,19 @@
+<h1 class="mt-4">profile</h1>
+
+<h3 class="lead mb-3">Welcome <%= user.name %></h3>
+<h3 class="lead mb-3">Votre email : <%= user.email %></h3>
+<img width="350" height="350" src=" <%= user.image %>" class="responsive-img" />
+<h3>Update Your Image</h3>
+<form action="/users/upload" method="POST" enctype="multipart/form-data">
+  <div class="file-field input-field">
+    <div class="btn grey">
+      <span>File</span>
+      <input name="myImage" type="file" />
+    </div>
+  </div>
+  <button type="submit" class="btn-primary">Submit</button>
+</form>
+<br />
+
+<br />
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
